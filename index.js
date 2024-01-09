@@ -1,10 +1,10 @@
-const { render } = require("eta/dist/types/render");
+//const { render } = require("eta/dist/types/render");
 
 function fetchBooks() {
   // To pass the tests, don't forget to return your fetch!
   return fetch('https://anapioficeandfire.com/api/books')
   .then(response => response.json())
-  .then(data => renderBooks(data))
+  .then(books => renderBooks(books))
 }
 
 function renderBooks(books) {
